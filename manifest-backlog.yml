@@ -6,6 +6,6 @@ applications:
   host: backlog-pal-smr
   path: Applications/BacklogServer/bin/Release/netcoreapp2.0/publish
   env:
-    REGISTRATION_SERVER_ENDPOINT: http://backlog-pal-smr/
+    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-smr/apps.pikes.pal.pivotal.io
   services:
   - tracker-backlog-database

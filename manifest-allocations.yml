@@ -6,6 +6,6 @@ applications:
   host: allocations-pal-smr
   path: Applications/AllocationsServer/bin/Release/netcoreapp2.0/publish
   env:
-    REGISTRATION_SERVER_ENDPOINT: http://allocations-pal-smr/
+    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-smr/apps.pikes.pal.pivotal.io
   services:
   - tracker-allocations-database
