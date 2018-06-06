@@ -3,7 +3,7 @@ applications:
 - name: tracker-registration
   instances: 1
   memory: 256M
-  host: registration-pal-INITIALS
+  host: registration-pal-smr
   path: Applications/RegistrationServer/bin/Release/netcoreapp2.0/publish
   services:
   - tracker-registration-database
