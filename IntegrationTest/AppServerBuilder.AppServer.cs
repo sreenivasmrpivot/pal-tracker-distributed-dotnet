@@ -53,6 +53,8 @@ namespace IntegrationTest
                     throw new InvalidOperationException($"File {_dllPath} does not exist. Run 'dotnet build' to rebuild the application.");
                 }
 
+                Console.WriteLine("Starting Process... " + _startInfo.Arguments);
+
                 _process = Process.Start(_startInfo);
 
                 WaitUntilReady();
