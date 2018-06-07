@@ -55,9 +55,7 @@ namespace AllocationsServer
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            // loggerFactory.AddCloudFoundry(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-            // loggerFactory.AddDynamicConsole();
 
             app.UseMvc();
             app.UseDiscoveryClient();
