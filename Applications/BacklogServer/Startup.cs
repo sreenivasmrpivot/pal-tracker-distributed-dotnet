@@ -11,6 +11,7 @@ using Pivotal.Discovery.Client;
 using Steeltoe.Common.Discovery;
 using Steeltoe.CircuitBreaker.Hystrix;
 using Steeltoe.Management.CloudFoundry;
+using Steeltoe.Management.Endpoint.Health;
 
 namespace BacklogServer
 {
