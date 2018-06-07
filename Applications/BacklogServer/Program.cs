@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Steeltoe.Extensions.Configuration.CloudFoundry;
+using Steeltoe.Extensions.Logging;
 
 namespace BacklogServer
 {
@@ -21,6 +22,13 @@ namespace BacklogServer
                 // https://github.com/aspnet/KestrelHttpServer/issues/1998#issuecomment-322922164
                 // .UseConfiguration(new ConfigurationBuilder().AddCommandLine(args).Build())
                 .AddCloudFoundry()
+                .ConfigureLogging((builderContext, loggingBuilder) =>
+                {
+                    loggingBuilder.AddConfiguration(builderContext.Configuration.GetSection("Logging"));
+
+                    // Add Steeltoe Dynamic Logging provider
+                    loggingBuilder.AddDynamicConsole();
+                })
                 .UseStartup<Startup>();
     }
 }
