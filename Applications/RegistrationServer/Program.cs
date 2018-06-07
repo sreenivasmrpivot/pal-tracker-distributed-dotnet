@@ -24,8 +24,6 @@ namespace RegistrationServer
                 .AddCloudFoundry()
                 .ConfigureLogging((builderContext, loggingBuilder) =>
                 {
-                    loggingBuilder.AddConfiguration(builderContext.Configuration.GetSection("Logging"));
-
                     // Add Steeltoe Dynamic Logging provider
                     loggingBuilder.AddDynamicConsole();
                 })
