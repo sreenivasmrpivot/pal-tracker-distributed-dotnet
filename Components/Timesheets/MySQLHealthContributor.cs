@@ -15,7 +15,7 @@ namespace Timesheets
             _logger = logger;
         }
 
-        public string Id { get; } = "mySql";
+        public string Id { get; } = "p-mysql";
 
         public Health Health()
         {
