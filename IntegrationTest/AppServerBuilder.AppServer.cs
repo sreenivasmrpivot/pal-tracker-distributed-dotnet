@@ -57,7 +57,11 @@ namespace IntegrationTest
 
                 _process = Process.Start(_startInfo);
 
+                Console.WriteLine("Started Process... " + _startInfo.Arguments + " successfully");
+
+                Console.WriteLine("Started waiting");
                 WaitUntilReady();
+                Console.WriteLine("Done waiting");
 
                 new TestDatabaseSupport(TestDatabaseSupport.ConnectionString(_database)).TruncateAllTables();
             }
