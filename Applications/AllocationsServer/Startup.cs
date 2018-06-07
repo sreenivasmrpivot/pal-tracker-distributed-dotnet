@@ -12,6 +12,7 @@ using Steeltoe.Common.Discovery;
 using Steeltoe.CircuitBreaker.Hystrix;
 using Steeltoe.Management.CloudFoundry;
 using Steeltoe.Management.Endpoint.Health;
+using Steeltoe.CloudFoundry.Connector.MySql;
 
 namespace AllocationsServer
 {
@@ -46,6 +47,8 @@ namespace AllocationsServer
                 return new ProjectClient(httpClient, logger);
             });
 
+            services.AddMySqlConnection(Configuration);
+            
             // Add custom health check contributor
             services.AddScoped<IHealthContributor, MySqlHealthContributor>();
 
