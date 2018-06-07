@@ -60,6 +60,7 @@ namespace AllocationsServer
             app.UseDiscoveryClient();
             app.UseHystrixMetricsStream();
             app.UseHystrixRequestContext();
+            app.UseCloudFoundryActuators();
         }
     }
 }

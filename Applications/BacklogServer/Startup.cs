@@ -60,6 +60,7 @@ namespace BacklogServer
             app.UseDiscoveryClient();
             app.UseHystrixMetricsStream();
             app.UseHystrixRequestContext();
+            app.UseCloudFoundryActuators();
         }
     }
 }

@@ -48,6 +48,7 @@ namespace RegistrationServer
 
             app.UseMvc();
             app.UseDiscoveryClient();
+            app.UseCloudFoundryActuators();
         }
     }
 }
