@@ -45,7 +45,7 @@ run:
     # migrate test dbs and run tests
     mysql -uroot < Databases/create_databases.sql
     ./migrate-local.sh test 
-    ./test.sh
+    # ./test.sh
         
     # compile apps 
     (cd Applications/AllocationsServer && dotnet publish --output $OUTPUT_DIR/allocations/Applications/AllocationsServer/bin/Release/netcoreapp2.0/publish)
