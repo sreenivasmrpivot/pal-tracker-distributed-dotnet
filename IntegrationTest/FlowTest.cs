@@ -58,10 +58,10 @@ namespace IntegrationTest
             _backlogServer.Start();
             _timesheetsServer.Start();
             Console.WriteLine("Successfully Started all the Servers");
-            Console.WriteLine("registrationServer url: " + _registrationServer.url);
-            Console.WriteLine("allocationsServer url: " + _allocationsServer.url);
-            Console.WriteLine("backlogServer url: " + _backlogServer.url);
-            Console.WriteLine("timesheetsServer url: " + _timesheetsServer.url);
+            Console.WriteLine("registrationServer url: " + _registrationServer.Url());
+            Console.WriteLine("allocationsServer url: " + _allocationsServer.Url());
+            Console.WriteLine("backlogServer url: " + _backlogServer.Url());
+            Console.WriteLine("timesheetsServer url: " + _timesheetsServer.Url());
 
             HttpResponseMessage response;
 
