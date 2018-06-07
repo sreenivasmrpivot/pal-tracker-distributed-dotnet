@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Steeltoe.CloudFoundry.Connector.MySql.EFCore;
 using Timesheets;
 using Pivotal.Discovery.Client;
+using Steeltoe.Common.Discovery;
 
 namespace TimesheetsServer
 {

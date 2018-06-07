@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Steeltoe.CloudFoundry.Connector.MySql.EFCore;
 using Pivotal.Discovery.Client;
-using Pivotal.Discovery.Client;
+using Steeltoe.Common.Discovery;
 
 namespace BacklogServer
 {
