@@ -52,10 +52,16 @@ namespace IntegrationTest
         [Fact]
         public void TestBasicFlow()
         {
+            Console.WriteLine("Starting all the Servers");
             _allocationsServer.Start();
             _registrationServer.Start();
             _backlogServer.Start();
             _timesheetsServer.Start();
+            Console.WriteLine("Successfully Started all the Servers");
+            Console.WriteLine("registrationServer url: " + _registrationServer.url);
+            Console.WriteLine("allocationsServer url: " + _allocationsServer.url);
+            Console.WriteLine("backlogServer url: " + _backlogServer.url);
+            Console.WriteLine("timesheetsServer url: " + _timesheetsServer.url);
 
             HttpResponseMessage response;
 
