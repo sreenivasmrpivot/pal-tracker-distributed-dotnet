@@ -5,7 +5,8 @@ applications:
   memory: 256M
   host: timesheets-pal-smr
   path: Applications/TimesheetsServer/bin/Release/netcoreapp2.0/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-smr/apps.pikes.pal.pivotal.io
+  # env:
+  #   REGISTRATION_SERVER_ENDPOINT: http://registration-pal-smr/apps.pikes.pal.pivotal.io
   services:
   - tracker-timesheets-database
+  - tracker-service-registry

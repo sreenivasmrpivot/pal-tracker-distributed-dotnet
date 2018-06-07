@@ -7,3 +7,4 @@ applications:
   path: Applications/RegistrationServer/bin/Release/netcoreapp2.0/publish
   services:
   - tracker-registration-database
+  - tracker-service-registry
