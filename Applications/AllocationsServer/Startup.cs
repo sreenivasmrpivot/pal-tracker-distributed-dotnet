@@ -46,6 +46,9 @@ namespace AllocationsServer
                 return new ProjectClient(httpClient, logger);
             });
 
+            // Add custom health check contributor
+            services.AddScoped<IHealthContributor, MySqlHealthContributor>();
+
             services.AddCloudFoundryActuators(Configuration);
             services.AddDiscoveryClient(Configuration);
             services.AddHystrixMetricsStream(Configuration);
