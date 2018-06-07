@@ -15,7 +15,7 @@ namespace Backlog
             _logger = logger;
         }
 
-        public string Id { get; } = "p-mysql";
+        public string Id { get; } = "mysql";
 
         public Health Health()
         {
