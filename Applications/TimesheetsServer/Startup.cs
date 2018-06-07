@@ -10,6 +10,7 @@ using Timesheets;
 using Pivotal.Discovery.Client;
 using Steeltoe.Common.Discovery;
 using Steeltoe.CircuitBreaker.Hystrix;
+using Steeltoe.Management.CloudFoundry;
 
 namespace TimesheetsServer
 {
@@ -44,6 +45,7 @@ namespace TimesheetsServer
                 return new ProjectClient(httpClient, logger);
             });
 
+            services.AddCloudFoundryActuators(Configuration);
             services.AddDiscoveryClient(Configuration);
             services.AddHystrixMetricsStream(Configuration);
         }

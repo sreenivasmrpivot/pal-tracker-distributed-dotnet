@@ -10,6 +10,7 @@ using Steeltoe.CloudFoundry.Connector.MySql.EFCore;
 using Pivotal.Discovery.Client;
 using Steeltoe.Common.Discovery;
 using Steeltoe.CircuitBreaker.Hystrix;
+using Steeltoe.Management.CloudFoundry;
 
 namespace AllocationsServer
 {
@@ -44,6 +45,7 @@ namespace AllocationsServer
                 return new ProjectClient(httpClient, logger);
             });
 
+            services.AddCloudFoundryActuators(Configuration);
             services.AddDiscoveryClient(Configuration);
             services.AddHystrixMetricsStream(Configuration);
         }
